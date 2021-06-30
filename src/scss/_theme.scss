@@ -1,0 +1,808 @@
+// themes -------------------------------------------------------- //
+/* Overrides of native out-of-the-box styles.
+ * Theme name goes in BODY as a class selector. */
+
+
+/* dark mode ------------------------- */
+
+$theme-color-bg:							$black;
+
+$theme-color-1:								$illdave-blue;
+$theme-color-2:								$illdave-orange;
+$theme-color-3:								$illdave-cyan;
+$theme-color-4:								$illdave-green;
+$theme-color-5:								$illdave-yellow;
+$theme-color-6:								$illdave-teal;
+$theme-color-7:								darken($theme-color-3, 5%); // dark blue
+$theme-color-8: 							#00b1cb; // pastel foam
+
+$selection-color: 							$white;
+$selection-bg-color: 						darken($theme-color-3, 20%);
+
+$code-color-magenta: 						#e9008c;
+$code-color-green: 							#3c0;
+$code-color-blue-deep: 						#06c;
+$code-color-blue-bright: 					#9cf;
+$code-color-orange: 						#f90;
+$code-color-gray: 							#ccc;
+
+$white-glow: 								0 0 10px $white;
+
+$code-soup-color: 							$code-color-green;
+
+$body-bg:									$theme-color-bg;
+$headings-color: 							$white;
+$text-color:								lighten($theme-color-bg, 80%);
+$text-divider-color:						transparentize($text-color, 0.5);
+$link-color:								$theme-color-8;
+$link-hover-color:							$white;
+$link-active-color:							darken($link-color, 20%);
+
+$link-img-border:							rem(1px solid $white);
+$link-img-border-hover-color:				$link-color;
+$link-img-border-active-color:				$link-active-color;
+
+$icon-link-color: 							$text-color;
+$icon-link-color-hover: 					$white;
+$icon-link-color-active: 					darken($icon-link-color, 30%);
+
+$excerpt-hover-color:						$white;
+$excerpt-active-color:						darken($text-color, 30%);
+
+$border-default-color:						lighten($theme-color-bg, 30%);
+$border-default: 							rem(1px solid $border-default-color);
+$border-top:								$border-default;
+$border-light-color: 						lighten($border-default-color, 10%);
+$border-light: 								rem(1px solid $border-light-color);
+$table-border-color:						$border-default-color;
+
+$lightbox-image-border: 					rem(2px solid $white);
+$lightbox-data-color: 						$gray-light-med;
+$lightbox-header-color: 					$white;
+$lightbox-text-color: 						$lightbox-data-color;
+$lightbox-link-color: 						$link-color;
+$lightbox-link-hover-color: 				$link-hover-color;
+$lightbox-link-active-color: 				$link-active-color;
+
+$main-nav-bg:								$body-bg;
+$main-nav-border:							$border-default;
+
+$nav-link:									transparentize($white, 0.2);
+$nav-link-hover:							$white;
+$nav-link-current:							$white;
+$nav-link-active:							$black;
+
+$nav-link-color:							transparentize($white, 0.4);
+$nav-link-bg:								transparent;
+$nav-link-border:							0;
+
+$nav-link-hover-color:						$white;
+$nav-link-hover-bg:							transparent;
+$nav-link-hover-border-color:				none;
+
+$nav-link-active-color:						lighten($main-nav-bg, 50%);
+$nav-link-active-bg:						transparent;
+$nav-link-active-border-color:				$nav-link-active-bg;
+
+$nav-link-curr-color:						$white;
+$nav-link-curr-bg:							transparent;
+$nav-link-curr-border-color:				$nav-link-curr-bg;
+
+$navbar-icon:								$white;
+$navbar-icon-hover:							$white-glow;
+$navbar-icon-active:						$black;
+
+$navbar-brand-logo-filter-hover:			brightness(130%);
+$navbar-brand-type-filter-hover:			drop-shadow($white 0 0 7px);
+
+$footer-bg: 								$body-bg;
+$footer-color: 								lighten($footer-bg, 50%);
+$footer-border-color: 						lighten($footer-bg, 20%);
+
+$section-bg: 								lighten($theme-color-bg, 9%);
+$section-bg-even: 							darken($section-bg, 20%);
+$section-bg-blog-even:  					$section-bg-even;
+
+$item-bg: 									darken($section-bg, 7%);
+$item-even-bg-color:						lighten($section-bg-even, 5%);
+$item-even-bg:								lighten($section-bg-even, 7%);
+$item-text-color: 							$text-color;
+$item-headings-color: 						$headings-color;
+$item-link-color: 							$link-color;
+$item-link-color-hover: 					$link-hover-color;
+$item-link-color-active: 					$link-active-color;
+$item-border-color: 						transparentize($item-text-color, 0.2);
+
+$profile-bg: 								darken($section-bg, 10%);
+$profile-image-border: 						rem(6px solid $profile-bg);
+$profile-image-bg: 							transparent center center no-repeat;
+$profile-image-size: 						10rem;
+$profile-image-zindex: 						800;
+$profile-text-bg: 							$profile-bg;
+$profile-text-padding: 						$spacer-large;
+$profile-text-zindex: 						700;
+
+$client-details-bg:							transparent;
+$client-details-padding: 					0;
+
+$boxed-client-details-bg: 					darken($section-bg, 10%);
+$boxed-client-details-even-bg: 				lighten($section-bg-even, 10%);
+$boxed-client-details-padding: 				$spacer-large;
+
+$contact-bg: 								$item-bg;
+$contact-text-color:						$white;
+$contact-headings-color: 					$contact-text-color;
+$text-divider-color:						transparentize($text-color, 0.5);
+$contact-link-color:						$link-color;
+$contact-link-hover-color:					$link-hover-color;
+$contact-link-active-color:					$link-active-color;
+
+
+.dark-mode {
+	background: $body-bg;
+
+	/* fonts ------------------------- */
+
+	/* html elements ----------------- */
+
+	::selection {
+		color: $selection-color;
+		background-color: $selection-bg-color;
+	}
+
+	h1, h2, h3, h4, dl dt, strong {
+		color: $headings-color;
+	}
+	p, li, dd {
+		color: $text-color;
+	}
+	a {
+		color: $link-color;
+		img {
+			border: $link-img-border;
+		}
+		&:hover {
+			color: $link-hover-color;
+			img {
+				border-color: $link-img-border-hover-color;
+			}
+		}
+		&:active {
+			color: $link-active-color;
+			img {
+				border-color: $link-img-border-active-color;
+			}
+		}
+
+		&.btn {
+			color: $btn-color;
+			background-color: $btn-bg;
+		}
+	}
+	pre {
+		color: $code-color;
+		background: $item-bg;
+		strong {
+			color: $code-color-green;
+		}
+	}
+
+	table, .table {
+		color: $text-color;
+		th, td {
+			border-color: $table-border-color;
+		}
+		th {
+			color: $headings-color;
+		}
+		> :not(:last-child) > :last-child > * {
+			border-bottom-color: $table-border-color;
+		}
+	}
+
+
+	/* main navigation --------------- */
+	.main-navigation {
+		.show,
+		.collapsing {
+			.navbar-nav {
+				flex-flow: row wrap;
+				margin-left: 3rem;
+				.nav-link {
+					padding: 0 .5rem;
+					margin-bottom: 0;
+				}
+			}
+		}
+		.navbar-brand  {
+			&:hover {
+				.mas-logo {
+					filter: $navbar-brand-logo-filter-hover;
+					&.type {
+						filter: $navbar-brand-type-filter-hover;
+					}
+				}
+			}
+			&:active {
+				.mas-logo {
+					&.type {}
+				}
+			}
+		}
+		.navbar {
+			border-bottom: $main-nav-border;
+			background: $main-nav-bg;
+			.navbar-nav {
+				.nav-link {
+					color: $nav-link-color;
+					background: $nav-link-bg;
+					border: $nav-link-border;
+					&:hover {
+						color: $nav-link-hover-color;
+						background: $nav-link-hover-bg;
+						border-color: $nav-link-hover-border-color;
+					}
+					&:active {
+						color: $nav-link-active-color;
+						background: $nav-link-active-bg;
+						border-color: $nav-link-active-border-color;
+					}
+				}
+				.active>.nav-link,
+				.nav-link.active,
+				.nav-link.show,
+				.show>.nav-link {
+					color: $nav-link-curr-color;
+					background: $nav-link-curr-bg;
+					border-color: $nav-link-curr-border-color;
+					font-family: $font-family-headers;
+				}
+			}
+			.navbar-toggler {
+				border: rem(1px solid);
+				border-color: transparentize(white, 0.7);
+				.navbar-toggler-icon {
+					color: $white;
+				}
+				&:hover {
+					background-color: lighten($main-nav-bg, 20%);
+					border-color: $white;
+				}
+				&.collapse {
+					background-color: $white;
+					.navbar-toggler-icon {
+						color: $text-color;
+					}
+				}
+			}
+		}
+	}
+
+
+	/* footer ------------------------ */
+	footer {
+		background: $footer-bg;
+		border-color: $footer-border-color;
+		color: $footer-color;
+	}
+
+
+	/* layout ------------------------ */
+
+	section {
+		background-color: $section-bg;
+		&.intro {
+			background-color: $section-bg-even;
+			border-bottom: $border-default;
+		}
+		&.even {
+			background-color: $section-bg-even;
+		}
+	}
+	.sidebar {
+		.item {
+			&.contact {
+				background: $contact-bg;
+				h2, dt {
+					color: $contact-headings-color;
+				}
+				li {
+					color: $contact-text-color;
+					&:not(:last-child) {
+						margin-right: .5rem;
+						padding-left: 1.5rem;
+					}
+				}
+				a {
+					color: $contact-link-color;
+					&:hover {
+						color: $contact-link-hover-color;
+					}
+					&:active {
+						color: $contact-link-active-color;
+					}
+				}
+			}
+			&.anecdote {}
+			&.powered-by {
+				dl {
+					dt {
+						color: $text-color;
+					}
+					dd {
+						.name {
+							color: $white;
+						}
+					}
+				}
+			}
+			&.border-top {
+				border-top: $border-top !important;
+				padding-top: 1rem;
+				margin-top: 1rem;
+			}
+		}
+		ul {
+			margin-bottom: 0;
+		}
+	}
+	figure {
+		border-bottom: $border-default;
+	}
+
+	.lightbox {
+		.lb-image {
+		  border-radius: $lightbox-border-radius;
+		  border: $lightbox-image-border;
+		}
+		.lb-dataContainer {
+			.lb-data {
+				color: $lightbox-data-color;
+				.lb-details {
+					.lb-caption {
+						color: $lightbox-header-color;
+						a {
+							color: $lightbox-link-color;
+							&:hover {
+								color: $lightbox-link-hover-color;
+							}
+							&:active {
+								color: $lightbox-link-active-color;
+							}
+						}
+					}
+					  color: $lightbox-text-color;
+					}
+				}
+			}
+		}
+
+
+	/* utility ----------------------- */
+
+	.first-paragraph,
+	.first-sentence {
+		color: $headings-color;
+	}
+	.item {
+		background: transparent no-repeat 0 0;
+		color: $item-text-color;
+		border-color: $item-border-color;
+		padding: 0;
+		&.even {
+			background-color: $item-even-bg;
+		}
+		h2, h3, h4 {
+			color: $item-headings-color;
+		}
+		&.boxed {
+			padding: 1rem 2rem;
+			background: $item-bg;
+		}
+	}
+	.boxed {
+		.client-details {
+			background: $boxed-client-details-bg;
+			padding: $boxed-client-details-padding;
+		}
+		&.even {
+			.client-details {
+				background: $boxed-client-details-even-bg;
+			}
+		}
+	}
+	.jobs {
+		h2 {
+			margin-bottom: $spacer-base;
+			padding-bottom: $spacer-small;
+			border-bottom: $border-default;
+		}
+	}
+
+	.rip-jobs {
+		.rip-job {
+			border-top: $border-default;
+			&:first-child {
+				border-top: 0;
+			}
+		}
+	}
+
+
+	.tiled {
+		 a {
+			&.tile {
+				border: $link-img-border;
+				&:hover {
+					border-color: $link-img-border-hover-color;
+				}
+				&:active {
+					border-color: $link-img-border-active-color;
+				}
+			}
+		}
+	}
+
+	.labeled {
+		img {
+			margin-bottom: $spacer-small;
+		}
+		.client-image {
+			img {
+				margin-bottom: $spacer-small !important;
+			}
+		}
+	}
+	.row {
+		&.in-content {
+			a {
+				img {
+					border: $link-img-border;
+				}
+				&:hover {
+					img {
+						border-color: $link-img-border-hover-color;
+					}
+				}
+				&:active {
+					img {
+						border-color: $link-img-border-active-color;
+					}
+				}
+			}
+			&.figure {
+				.figure-caption {
+					p {
+						border-bottom: $border-default;
+					}
+				}
+			}
+		}
+	}
+	.prev-next {
+		.prev, .next {
+			.fas {
+				color: $icon-link-color;
+			}
+			&:hover {
+				.fas {
+					color: $icon-link-color-hover;
+				}
+			}
+			&:active {
+				.fas {
+					color: $icon-link-color-active;
+				}
+			}
+		}
+	}
+	.social {
+			li, dd {
+			a {
+				&:before {
+					color: $icon-link-color;
+				}
+			}
+			&:hover a {
+				color: $icon-link-color-hover;
+				&:before {
+					color: $icon-link-color-hover;
+				}
+			}
+			&:active a {
+				color: $icon-link-color-active;
+				&:before {
+					color: $icon-link-color-active;
+				}
+			}
+		}
+	}
+	.code-soup {
+		li {
+			color: $code-soup-color;
+		}
+	}
+    .code {
+        color: $code-color;
+        font-family: $code-font;
+        white-space: pre-wrap;
+        strong {
+            color: $code-color-green;
+        }
+    }
+	.disclaimer {
+		border: $border-default;
+		background: $item-even-bg;
+	}
+	.date-range {
+		color: $headings-color;
+	}
+	.vl {
+		border-left: $border-default;
+	}
+	.code-soup {
+		color: $code-soup-color;
+	}
+
+	.mas-website-history {
+		.version {
+			border-top: $border-default;
+			h3 {}
+			dl {
+				dt {
+					margin-bottom: 0;
+				}
+				dd {}
+			}
+		}
+	}
+
+
+	/* home -------------------------- */
+
+	.home {
+		section {
+			&.skills {
+				.item {
+					border-right: $border-default;
+					&.last-child {
+						border-right: 0;
+					}
+					background: $item-bg center center;
+					background-size: cover;
+					&.web-dev {
+						background-image: url("#{$image-path}/section-bg-target-dark.png");
+					}
+					&.graphic-design {
+						background-color: $item-even-bg;
+						background-image: url("#{$image-path}/section-bg-target-light.png");
+					}
+					&.illustration {
+						background-image: url("#{$image-path}/section-bg-target-dark.png");
+					}
+					&.comic-books {
+						background-color: $item-even-bg;
+						background-image: url("#{$image-path}/section-bg-target-light.png");
+					}
+				}
+			}
+		}
+	}
+
+
+	/* web --------------------------- */
+
+	.web {
+		.capabilities {
+			.item {
+				&.boxed {
+					background: transparent;
+				}
+
+			}
+		}
+		.client-image {
+			img {
+				margin-bottom: $spacer-base;
+			}
+		}
+		.client-details {
+			background: $client-details-bg;
+			padding: $client-details-padding;
+			color: $text-color;
+			h3, .h3 {
+				color: $item-headings-color;
+				text-align: left;
+			}
+			.project-date {
+				color: $headings-color;
+			}
+			p {
+			}
+		}
+		.boxed {
+			.client-details {
+				background: $item-bg;
+				padding: 2rem;
+			}
+			&.even {
+				.client-details {
+					background: $item-even-bg;
+				}
+			}
+		}
+
+
+	}
+
+
+	/* graphic design ---------------- */
+
+	/* illustration ------------------ */
+
+	/* comics ------------------------ */
+
+	.comics {
+		.skills {
+			.item {
+				padding: 2rem 2rem;
+				p {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+
+	/* about ------------------------- */
+
+	.about {
+		section {
+		}
+		.sidebar {
+			.item {
+					&.anecdote {
+						background: transparent;
+					}
+					&.powered-by {
+						background: transparent;
+						border-top: $border-default;
+						padding-top: $spacer-base;
+
+						h4 {
+							margin-bottom: 0;
+						}
+						dl {
+							dt {
+								color: $text-color;
+							}
+							dd {
+								.name {
+									color: $white;
+									margin-right: .5rem;
+								}
+							}
+						}
+					}
+					&.mas-logo {
+						background: $item-bg;
+						padding: $spacer-base;
+						p {
+							margin-bottom: 0;
+						}
+					}
+				}
+		}
+	}
+
+
+	/* blog -------------------------- */
+
+	.blog {
+		&.index {
+			article {
+				&:hover {
+					img {
+						border-color: $link-img-border-hover-color;
+						filter: $link-img-filter;
+					}
+					.excerpt {
+						color: $excerpt-hover-color;
+					}
+				}
+				&:active {
+					img {
+						border-color: $link-img-border-active-color;
+					}
+					.excerpt {
+						color: $excerpt-active-color;
+					}
+				}
+				figure {
+					img {
+						border: $link-img-border;
+					}
+				}
+			}
+			.older {
+				background: $section-bg-blog-even;
+				h2 {
+					border-bottom: $border-default;
+				}
+			}
+		}
+		.blog-nav {
+			dl {
+				border-top: $border-default;
+			}
+		}
+		article {
+			figure {
+				p {
+					padding-bottom: .5rem;
+					border-bottom: $border-default;
+				}
+			}
+		}
+	}
+
+
+	/* responsive -------------------- */
+
+	@media (max-width: 576px) {
+		.main-navigation {
+			.show .navbar-nav,
+			.collapsing .navbar-nav {
+				margin-left: 0;
+			}
+		}
+		.section {
+			padding: 1rem;
+		}
+		.home section.skills {
+			.item {
+				border-bottom: $border-default;
+				border-right: 0;
+				&.last-child {
+					border-bottom: 0;
+				}
+				.text {
+					margin: 0 2rem;
+				}
+			}
+		}
+		.web section.capabilities {
+			padding: 0 1rem;
+			.item {
+				border-bottom: $border-default;
+				&.last-child {
+					border: 0;
+				}
+			}
+		}
+		table, .table {
+			th, td {
+			}
+			td {
+				&:before {
+				}
+			}
+			th {
+				background-color: transparent;
+				margin-top: 1rem;
+				border-bottom-width: rem(2px);
+			}
+		}
+		.rip-jobs {
+			.rip-job {
+				&:first-child {
+					border-top: $border-default;
+					padding-top: 1rem;
+				}
+			}
+		}
+	}
+}
+
+
+

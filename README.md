@@ -1,27 +1,28 @@
-# DaveAngularDemo
+# Dave's Angular Demo
+My public learning journey into web developer geekdom
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.0.
+## Me
+David Marshall, front-end web developer, graphic designer, and all-around commercial artist. My contractor identity is Marshall Art Studio
 
-## Development server
+## Marshall Art Studio website
+https://illdave.com
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Version
+Dave's Angular Demo version 1.0.0
 
-## Code scaffolding
+## Built with
+* [Angular CLI] (https://angular.io) - version 12.1.0
+* [npm] (https://www.npmjs.com) - version 7.11.2
+* [NodeJS] (http://nodejs.org) - version 14.14.0
+* [Bootstrap] (http://getbootstrap.com) - version 5.0
+* [BBEdit] (http://barebones.com) - version 12.6.7
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Buy me a coffee
+If digging into this project has given you insight, entertainment, or even the thrill of knowing you could do it better in your sleep, please consider keeping me off the streets and out of trouble by buying me a cup of coffee. :)
+<a href="https://www.buymeacoffee.com/illdave" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Please buy David Marshall a cup of coffee. I feel better with him off the streets and out of trouble." style="height: auto !important;width: auto !important;" ></a>
 
-## Build
+## Status
+Project is: _in progress_
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Contact
+Created by [@Dave Marshall](https://www.illdave.com/) - feel free to contact me.

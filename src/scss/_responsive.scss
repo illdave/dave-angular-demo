@@ -1,0 +1,201 @@
+/* responsive ------------------------- */
+
+@media (max-width: 576px) { 
+	.mas-client .row > div {
+		flex: auto;
+	}
+	section {
+		padding: $spacer-base;
+		&.picture-header {
+			.text {
+				font-size: $font-size-base;
+				padding: $spacer-base $spacer-large 0;
+			}
+		}		
+	}
+	
+	table, .table {
+		th, td {
+			display: block;
+			padding: .5rem;
+		}
+		td {
+			&:before {
+				content: attr(data-header);
+				font-weight: bold;
+				display: inline-block;
+				width: 50%;
+				text-align: right;
+				padding-right: 1rem;
+			}
+		}
+		th {
+			text-align: left;
+			background-color: $item-bg;
+			padding: 5px;
+			&[scope="col"] {
+				display: none;
+			}
+		}
+		tfoot {
+			td {
+				padding: .5rem 0;
+				&:before {
+					content: normal;
+				}
+			}
+		}	
+	}
+	.main-navigation {
+		.show .navbar-nav, 
+		.collapsing .navbar-nav {
+			margin-left: 0;
+		}	
+		.navbar-brand {
+			width: auto;
+			.mas-logo {
+				&.type {
+					display: none;
+				}
+			}
+		}
+	}	
+	
+	.first-paragraph, .first-sentence {
+		font-size: $h4-font-size;
+		line-height: 1.5rem;
+		margin-bottom: $spacer-small;
+	}
+	
+	.newspaper-intro {
+		margin-bottom: $spacer-base;
+		.first-paragraph, .first-sentence {
+			margin-bottom: $spacer-small;
+		}
+	}
+	
+	.gallery, 
+	.tiles {
+		padding: 1rem 0;
+	}
+	
+	.web {
+		.clients {
+			&.jobs {
+				.client-details {
+				}
+			}
+			&.mas-client.clients {
+				padding: 1rem;
+				padding-bottom: 0;
+				.client-details {
+					margin-bottom: 2rem;
+				}
+			}
+		}
+		.client-details {
+			margin-bottom: 2rem;
+		}
+	}
+	.diagram {
+		align-items: start;
+		&.pie-chart {
+			.image {
+				display: none;
+			}
+			.data {
+				width: 100% !important;
+			}
+		}
+	} 
+	
+	section.picture-header .image {
+		min-height: 10rem;
+	}
+	.btn-row {
+		&.centered {
+			.btn {
+				margin-bottom: .5rem;
+			}
+		}
+	}
+	
+	.home section.skills,
+	.web section.capabilities {
+		.item {
+			padding: 1rem 0;
+			min-height: auto;
+			border-bottom: $border-default;
+			&.last-child {
+			  border: 0;
+			}
+			h2, p {
+			}
+		}	
+	}
+	.home {
+		.intro {
+			.btn-row {
+				text-align: center;
+			}
+		}
+	}
+	.blog {
+		&.index {
+			.older {
+				article {
+					figure {
+						float: none;
+						width: 100%;
+						margin-right: 0;
+						margin-bottom: 1rem;
+					}
+					header {
+						float: none;
+						width: 100%;
+						margin-bottom: 1rem;
+					}	
+				}	
+			}
+		}
+	}
+}
+
+
+
+@media (max-width: 768.98px) { 
+	.container {
+		max-width: 768px !important;
+	}
+	.page-not-found {
+		section {
+			&.intro {
+				.text {
+					padding: 1rem;
+					margin-bottom: 0;
+					h1 {
+						font-size: 10rem;
+						line-height: 10rem;
+						margin-bottom: .5rem;
+					}
+				}
+			}		
+		}
+	}
+}
+
+@media (max-width: 991px) { 
+	.container {
+		max-width: 950px !important;
+	}
+	.diagram {
+		
+		&.pie-chart {
+			.image {
+				.label {
+					display: none;
+				}
+			}
+		}
+	} 
+}
